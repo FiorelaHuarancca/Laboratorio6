@@ -27,6 +27,13 @@ let persons = [
 
 ]
 
+app.get('/info', (request, response) => {
+    let fechaHora = new Date()
+    let mensaje = `<p>Phonebook has info for ${persons.length} people</p>
+                 <p>${fechaHora}</p>\``
+    response.send(mensaje)
+})
+
 
 app.get('/api/persons', (request, response) => {
     response.json(persons)
