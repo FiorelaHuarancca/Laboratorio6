@@ -3,6 +3,7 @@ const http = require('http')
 const express = require('express')
 const { Console } = require('console')
 const app = express ()
+app.use(express.json())
 
 let persons = [
     {
@@ -73,6 +74,23 @@ app.get('/api/persons', (request, response) => {
 app.get('/api/persons', (request, response) => {
     response.json(notes)
 })
+
+app.post('/api/persons', (request, response) => {
+    const person = {
+        id:getRandomInt(100,10000),
+        name:request.body.name,
+        number:request.body.number,
+    }
+
+    response.json(person)
+})
+
+function getRandomInt(minimo, maximo) {
+    minimo = Math.ceil(minimo);
+    maximo = Math.floor(maximo);
+    return Math.floor(Math.random() * (maximo - minimo) + minimo); 
+}
+
 
 
 const PORT = 3001
