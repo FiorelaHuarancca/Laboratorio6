@@ -1,7 +1,8 @@
-const http = require('http')
+import http from 'http'
+import express from 'express'
 
 const express = require('express')
-const { Console } = require('console')
+
 const app = express ()
 app.use(express.json())
 
