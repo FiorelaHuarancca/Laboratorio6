@@ -46,14 +46,15 @@
 				}
 			},
 			"response": []
-		},		{
+		},
+		{
 			"name": "http://localhost:3001/api/persons/",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n   \"name\":\"Sixto Santiago Aisa\" ,\r\n   \"number\":\"51958020402\"\r\n}",
+					"raw": "{\r\n   \"name\":\"Yamilet Huarancca\" ,\r\n   \"number\":\"545-329502\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
