@@ -76,6 +76,30 @@ app.get('/api/persons', (request, response) => {
 })
 
 app.post('/api/persons', (request, response) => {
+
+    const body = request.body
+    let error ;
+    console.log(body)
+
+    if (!body.name) {
+        error = "Falta el nombre"
+    }
+
+    if (!body.number) {
+        error = "Falta el número"
+    }
+
+    if (!body.name && !body.number) {
+        error = "No se encontro el nombre ni la agenda"
+    }
+
+    if (error) {
+        return response.status(400).json({
+            error: error
+        })
+    }
+
+ 
     const person = {
         id:getRandomInt(100,10000),
         name:request.body.name,
