@@ -46,37 +46,7 @@
 				}
 			},
 			"response": []
-		},		{
-			"name": "http://localhost:3001/api/persons/",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n   \"name\":\"Sixto Santiago Aisa\" ,\r\n   \"number\":\"51958020402\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3001/api/persons/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3001",
-					"path": [
-						"api",
-						"persons",
-						""
-					]
-				}
-			},
-			"response": []
 		}
-
 
          ]
 }
