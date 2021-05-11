@@ -44,6 +44,11 @@ app.use((request, res, next) => {
   console.log(req.body)
 })
 
+app.get('/', (request, response) => {
+  const mensaje = 'holaaaa'
+  response.send(mensaje)
+})
+
 app.get('/info', (request, response) => {
   const fechaHora = new Date()
   const mensaje = `<p>Phonebook has info for ${persons.length} people</p>
