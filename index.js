@@ -117,6 +117,7 @@ function getRandomInt (minimo, maximo) {
   return Math.floor(Math.random() * (maximo - minimo) + minimo)
 }
 
-const PORT = 3001
+const PORT = process.env.PORT
+
 app.listen(PORT)
 console.log(`Server running on port ${PORT}`)
